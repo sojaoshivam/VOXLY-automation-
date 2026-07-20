@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030303;
+  --foreground: #f4f4f7;
+  --card-bg: #09090f;
+  --card-border: #151525;
+  --primary-glow: rgba(139, 92, 246, 0.15);
+  --accent-purple: #8b5cf6;
+  --accent-blue: #3b82f6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  overflow: hidden;
+}
+
+/* Custom scrollbars for a premium desktop-grade feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1d1d35;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a4c;
+}
+
+/* Premium Animations & Glow Effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom glassmorphism card */
+.glass-card {
+  background: rgba(12, 12, 22, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glass-card:hover {
+  border-color: rgba(139, 92, 246, 0.2);
+  box-shadow: 0 4px 30px rgba(139, 92, 246, 0.03);
+}
+
+/* Glowing text */
+.glow-text {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+/* Violet subtle background glow radial helper */
+.radial-glow {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+}
+
+/* Simulated video timeline styling */
+.timeline-track {
+  background: repeating-linear-gradient(
+    90deg,
+    #121222,
+    #121222 20px,
+    #16162f 20px,
+    #16162f 40px
+  );
+}
